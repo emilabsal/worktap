@@ -1,14 +1,11 @@
 <template>
   <div>
-    <the-header />
+    <actual-works />
   </div>
 </template>
 
 <script>
-import theHeader from "~/components/common/header.vue";
-
 export default {
   name: "IndexPage",
-  components: { theHeader },
 };
 </script>

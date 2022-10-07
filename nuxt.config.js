@@ -31,6 +31,7 @@ export default {
     "~/components",
     { path: "~/components/common", prefix: "the" },
     { path: "~/components/ui", prefix: "ui" },
+    { path: "~/components/cards", prefix: "card" },
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -41,6 +42,7 @@ export default {
     scss: [
       "./assets/styles/parts/_media.scss",
       "./assets/styles/parts/_variables.scss",
+      "./assets/styles/parts/_typography.scss",
     ],
   },
 
