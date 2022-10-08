@@ -81,6 +81,7 @@
         <img src="~/assets/img/banner.png" alt="banner" />
       </div>
     </section>
+    <actual-works />
   </main>
 </template>
 

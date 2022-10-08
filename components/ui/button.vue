@@ -77,9 +77,15 @@ export default {
 .outline {
   border: 1px solid $green;
   color: $green;
+  background-color: transparent;
   font-size: 14px;
   line-height: 17px;
   font-weight: 500;
+
+  &:hover {
+    background-color: $green;
+    color: $white;
+  }
 }
 
 .no-color {

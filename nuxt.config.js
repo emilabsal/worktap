@@ -31,6 +31,7 @@ export default {
     "~/components",
     { path: "~/components/common", prefix: "the" },
     { path: "~/components/ui", prefix: "ui" },
+    { path: "~/components/cards", prefix: "card" },
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
