@@ -41,6 +41,7 @@ export default {
     scss: [
       "./assets/styles/parts/_media.scss",
       "./assets/styles/parts/_variables.scss",
+      "./assets/styles/parts/_typography.scss",
     ],
   },
 

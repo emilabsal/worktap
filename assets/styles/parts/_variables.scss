@@ -7,6 +7,19 @@ $lightviolet: #F7F6FF;
 $violet: #B0AAD0;
 $darkviolet: #5E4EDB;
 $white: #F6FAFD;
+$darkgray: #656084;
+
+:export {
+    black: $black;
+    green: $green;
+    orange: $orange;
+    lightgray: $lightgray;
+    lightviolet: $lightviolet;
+    violet: $violet;
+    darkviolet: $darkviolet;
+    white: $white;
+    darkgray: $darkgray;
+}
 
 // Fonts
 $mainFont: 'Montserrat', sans-serif;
