@@ -2,7 +2,7 @@
   <div class="works container">
     <h2 class="works-title typography-h2">Актуальные ворки</h2>
     <div class="works-block">
-      <card-work-preview v-for="item in 5" />
+      <card-work-preview v-for="(item, index) in 5" :key="index" />
     </div>
   </div>
 </template>

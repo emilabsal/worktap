@@ -74,6 +74,21 @@ export default {
   }
 }
 
+.secondary {
+  color: $green;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  border: none;
+  background-color: $lightgray;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($green, 20%);
+  }
+}
+
 .outline {
   border: 1px solid $green;
   color: $green;

@@ -56,7 +56,7 @@
         </nav>
       </div>
       <div class="header-links">
-        <ui-button class="header-reg" name="Регистрация" />
+        <ui-button class="header-reg" type="secondary" name="Регистрация" />
         <ui-button name="Войти" />
       </div>
     </div>
