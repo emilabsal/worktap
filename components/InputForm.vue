@@ -5,7 +5,7 @@
       type="text"
       :placeholder="placeholder"
     />
-    <ui-button :name="buttonName" :background="orange" />
+    <ui-button :name="buttonName" type="accent" />
   </div>
 </template>
 

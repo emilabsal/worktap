@@ -10,12 +10,26 @@
       vitae vulputate est nec cras. Turpis nunc ornare nulla neque, interdum. At
       pharetra consectetur nec est convallis...
     </p>
-    <ui-button to="/" class="work-link" name="Посмотреть" type="outline" />
+    <ui-button
+      to="/"
+      class="work-link"
+      name="Посмотреть"
+      type="default"
+      :outline="true"
+    />
   </nuxt-link>
 </template>
 
 <script>
-export default {};
+import colors from "~/assets/styles/parts/_variables.scss";
+
+export default {
+  data() {
+    return {
+      green: colors.green,
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>

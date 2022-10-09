@@ -1,19 +1,37 @@
 .subtitle {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 24px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.typography-button-large {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+}
+
+.typography-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
 }
 
 .typography-input {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.typography-text-large {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .typography-text {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
 }
 
 .typography-h2 {
@@ -21,7 +39,6 @@
   font-weight: 600;
   line-height: 29px;
 }
-
 
 .typography-h3 {
   font-size: 18px;

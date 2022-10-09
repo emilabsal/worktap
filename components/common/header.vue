@@ -64,7 +64,16 @@
 </template>
 
 <script>
-export default {};
+import colors from "~/assets/styles/parts/_variables.scss";
+
+export default {
+  data() {
+    return {
+      green: colors.green,
+      lightgray: colors.lightgray,
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -100,11 +109,5 @@ export default {};
   display: flex;
   align-items: center;
   gap: 30px;
-}
-
-.header-reg.default {
-  background-color: $lightgray;
-  border: 1px solid $lightgray;
-  color: $green;
 }
 </style>
