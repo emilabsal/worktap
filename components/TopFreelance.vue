@@ -39,5 +39,6 @@ export default {};
   align-items: center;
   justify-content: center;
   color: $green;
+  padding: 20px;
 }
 </style>

@@ -26,4 +26,11 @@ export default {};
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 30px;
 }
+
+@include media-breakpoint-lg {
+  .works-block {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+}
 </style>

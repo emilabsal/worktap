@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="main">
     <section class="banner">
       <div class="banner-inner container">
         <div class="banner-desc">
@@ -27,7 +27,7 @@
             </div>
           </div>
         </div>
-        <img src="~/assets/img/banner.png" alt="banner" />
+        <img class="banner-image" src="~/assets/img/banner.png" alt="banner" />
       </div>
     </section>
     <actual-works />
@@ -85,7 +85,7 @@
             name="Начать!"
           />
         </div>
-        <img src="~/assets/img/help.png" alt="help" />
+        <img class="help-image" src="~/assets/img/help.png" alt="help" />
       </div>
     </section>
   </main>
@@ -134,6 +134,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.main {
+  background-color: $lightgreen;
+}
+
 .banner {
   padding-top: 38px;
   padding-bottom: 122px;
@@ -166,6 +170,33 @@ export default {
   margin-bottom: 50px;
 }
 
+@include media-breakpoint-md {
+  .banner {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    background: url("~/assets/img/banner.png") no-repeat right;
+  }
+  .banner-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    display: none;
+  }
+
+  .banner-desc {
+    max-width: initial;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 10px;
+    padding-top: 50px;
+    padding-bottom: 120px;
+  }
+}
+
+//category
 .category {
   margin-top: 50px;
 }
@@ -221,6 +252,28 @@ export default {
   margin-bottom: 20px;
 }
 
+@include media-breakpoint-sm {
+  .tasks-block {
+    flex-direction: column;
+  }
+
+  .tasks-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 320px;
+  }
+
+  .tasks-title {
+    text-align: center;
+  }
+
+  .tasks-text {
+    text-align: center;
+  }
+}
+
 //help
 .help {
   width: 100%;
@@ -234,6 +287,8 @@ export default {
     #efb400 100%
   );
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .help-inner {
@@ -252,6 +307,7 @@ export default {
   max-width: 533px;
   width: 100%;
   flex-shrink: 0;
+  padding: 20px 0;
 }
 
 .help-title {
@@ -281,5 +337,13 @@ export default {
 .help-subtitle {
   color: $white;
   margin-bottom: 40px;
+}
+
+@include media-breakpoint-md {
+  .help-image {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+  }
 }
 </style>

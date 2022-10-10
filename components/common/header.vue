@@ -1,53 +1,25 @@
 <template>
   <header class="header">
     <div class="header-inner container">
+      <button
+        :class="`mobile-menu ${open ? 'mobile-menu-active' : ''}`"
+        @click="open = !open"
+      >
+        <span class="mobile-menu-item"></span>
+        <span class="mobile-menu-item"></span>
+        <span class="mobile-menu-item"></span>
+      </button>
       <div class="header-left">
         <nuxt-link to="/" class="header-logo">
-          <img src="~/assets/img/logo.svg" alt="logo" />
+          <img class="logo" src="~/assets/img/logo.svg" alt="logo" />
         </nuxt-link>
         <nav class="nav">
           <ul class="nav-list">
-            <li class="nav-item">
+            <li class="nav-item" v-for="(item, index) in menu" :key="index">
               <ui-button
                 class="nav-link"
-                link="/"
-                name="Биржа"
-                type="no-color"
-                size="inline"
-              />
-            </li>
-            <li class="nav-item">
-              <ui-button
-                class="nav-link"
-                link="/"
-                name="Ворки"
-                type="no-color"
-                size="inline"
-              />
-            </li>
-            <li class="nav-item">
-              <ui-button
-                class="nav-link"
-                link="/"
-                name="Конкурсы"
-                type="no-color"
-                size="inline"
-              />
-            </li>
-            <li class="nav-item">
-              <ui-button
-                class="nav-link"
-                link="/"
-                name="Создать ворк"
-                type="no-color"
-                size="inline"
-              />
-            </li>
-            <li class="nav-item">
-              <ui-button
-                class="nav-link"
-                link="/"
-                name="Создать заказ"
+                :link="item.link"
+                :name="item.name"
                 type="no-color"
                 size="inline"
               />
@@ -56,9 +28,19 @@
         </nav>
       </div>
       <div class="header-links">
-        <ui-button class="header-reg" type="secondary" name="Регистрация" />
-        <ui-button name="Войти" />
+        <ui-button
+          class="header-reg typography-input"
+          type="secondary"
+          name="Регистрация"
+        />
+        <ui-button class="typography-input" name="Войти" />
       </div>
+      <ui-button
+        class="header-enter typography-input"
+        name="Вход"
+        type="no-color"
+        size="inline"
+      />
     </div>
   </header>
 </template>
@@ -71,6 +53,14 @@ export default {
     return {
       green: colors.green,
       lightgray: colors.lightgray,
+      open: false,
+      menu: [
+        { link: "/", name: "Биржа" },
+        { link: "/", name: "Ворки" },
+        { link: "/", name: "Конкурсы" },
+        { link: "/", name: "Создать ворк" },
+        { link: "/", name: "Создать заказ" },
+      ],
     };
   },
 };
@@ -109,5 +99,67 @@ export default {
   display: flex;
   align-items: center;
   gap: 30px;
+}
+
+.mobile-menu {
+  display: none;
+  background-color: transparent;
+  border: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.mobile-menu-item {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background-color: $black;
+  transition: 0.3s;
+}
+
+.mobile-menu-item:nth-child(2) {
+  transition: 0.1s;
+}
+
+.header-enter {
+  display: none;
+}
+
+.mobile-menu-active {
+  .mobile-menu-item:nth-child(2) {
+    visibility: hidden;
+  }
+
+  .mobile-menu-item:first-child {
+    transform: translateY(7px) rotateZ(45deg);
+  }
+
+  .mobile-menu-item:last-child {
+    transform: translateY(-7px) rotateZ(-45deg);
+  }
+}
+
+@include media-breakpoint-lg {
+  .header-links {
+    display: none;
+  }
+  .nav {
+    display: none;
+  }
+
+  .header-enter {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+}
+
+@include media-breakpoint-xs {
+  .logo {
+    width: 150px;
+  }
 }
 </style>
